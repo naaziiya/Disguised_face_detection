@@ -1,0 +1,16 @@
+.navbar-light .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar.navbar-light 
+.breadcrumb 
+.nav-item 
+.nav-link, 
+.navbar.navbar-light 
+.navbar-nav .nav-item .nav-link { 
+    color: #ffffff;    
+}
+
+.badge {
+    border-radius: 0;
+}
