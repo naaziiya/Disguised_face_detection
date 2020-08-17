@@ -1,0 +1,53 @@
+{% load static  %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Disguise Face Detection</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <style>
+        body {
+            background-image: url("{% static  '4.jpg' %}");
+            background-size: 100% auto;
+        }
+
+        .jumbotron {
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#">Disguise Face Detection</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login/">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron mt-2">
+            <h1 class="text-center">Disguise Face Detection</h1>
+            <hr class="my-4">
+            <p class="text-center">
+                Face recognition technology is considered as a convenient technology in present generation that may verify a target without contact with the target, dissimilar to other recognition technologies, for example, fingerprint and iris recognition, that require a user to perform a certain normal or an action. Such a face recognition technology has been widely used in various application fields, for example, security systems, mobile authentication, and multimedia searches due to convenience and effectiveness of the face recognition technology. However, a performance of the face recognition technology may be sensitive to a face pose and a facial expression of a user, an occlusion, a change in illumination.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

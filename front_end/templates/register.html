@@ -1,0 +1,85 @@
+{% load static  %}
+<html>
+
+<head>
+
+    <title>Disguise Face Detection</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <style>
+        body {
+            background-image: url("{% static  '2.jpg' %}");
+            background-size: 100% auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-end mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="text-center">Register</h4>
+                        <hr>
+                        <form action="/register/" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Name"
+                                    autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="contact" id="contact"
+                                    placeholder="Contact" maxlength="10" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email ID"
+                                    autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" id="password"
+                                    placeholder="Password" autocomplete="off">
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-primary">
+                                    Register
+                                </button>
+                            </div>
+                            {% if mes %}
+                            <div class="form-group text-center">
+                                <div class="alert alert-success">
+                                    {{ mes }}
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if error %}
+                            <div class="form-group text-center">
+                                <div class="alert alert-danger">
+                                    {{ error }}
+                                </div>
+                            </div>
+                            {% endif %}
+                            <div class="form-group text-center">
+                                Back to <a href="/login/">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#submit').click(function (e) {
+                $('#submit').hide();
+                $('.loader').show();
+            })
+        });
+    </script>
+</body>
+
+</html>
